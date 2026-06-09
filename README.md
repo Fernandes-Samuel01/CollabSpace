@@ -1,62 +1,136 @@
-# 🚀 CollabSpace – Real-Time Collaborative Document Platform
+# 🚀 CollabSpace - Real-Time Collaborative Document Platform
 
-CollabSpace is a full-stack real-time collaboration platform that enables multiple users to create, edit, and manage documents simultaneously. Built using the MERN stack and Socket.io, the application provides secure authentication, live document synchronization, role-based access control, user presence tracking, typing indicators, and activity monitoring.
-
-## 📌 Overview
-
-Modern teams require seamless collaboration while working on shared content. CollabSpace addresses this need by providing a responsive, secure, and real-time environment where users can work together efficiently.
-
-The platform supports document ownership, collaborator management, permission-based editing, live updates, and real-time communication features, making it suitable for team collaboration, project planning, note sharing, and document management.
+A full-stack real-time collaboration platform built with the MERN Stack and Socket.io that enables multiple users to create, share, edit, and manage documents simultaneously with role-based permissions, live synchronization, presence tracking, and activity monitoring.
 
 ---
 
-## ✨ Key Features
+## 🌐 Live Demo
 
-### Authentication & Security
+### Frontend
 
-* User Registration and Login
-* JWT-Based Authentication
+https://collab-space-mocha.vercel.app
+
+### Backend API
+
+https://collabspace-backend-vi6w.onrender.com
+
+---
+
+## 📖 Overview
+
+CollabSpace is a modern collaborative document management platform designed to provide seamless teamwork and real-time communication. Users can create documents, invite collaborators, manage permissions, and edit content together instantly.
+
+The application combines secure authentication, real-time synchronization, role-based access control, and collaborative productivity features to deliver a smooth user experience.
+
+---
+
+## ✨ Features
+
+### 🔐 Authentication & Security
+
+* User Registration
+* User Login
+* JWT Authentication
 * Email Verification
 * Protected Routes
-* Secure Password Hashing using bcrypt
+* Password Hashing with bcrypt
+* Secure API Access
 
-### Document Management
+### 📄 Document Management
 
 * Create Documents
 * Edit Documents
 * Delete Documents
 * View Owned Documents
 * View Shared Documents
+* Real-Time Content Updates
 
-### Real-Time Collaboration
-
-* Live Document Synchronization using Socket.io
-* Multi-User Editing
-* Instant Updates Across Connected Clients
-* Automatic Reconnection Support
-
-### Collaboration Controls
+### 🤝 Collaboration System
 
 * Share Documents via Email
-* Role-Based Permissions
-* Editor Access
-* Viewer Access
+* Add Collaborators
 * Remove Collaborators
+* Role-Based Access Control
+* Owner Permissions
+* Editor Permissions
+* Viewer Permissions
 * Update Collaborator Roles
 
-### Presence System
+### ⚡ Real-Time Features
 
-* Active User Tracking
-* Real-Time Presence Bar
+* Socket.io Integration
+* Live Document Synchronization
+* Instant Multi-User Editing
+* Presence Tracking
+* Typing Indicators
 * User Join Notifications
 * User Leave Notifications
+* Connection Status Monitoring
 
-### Productivity Features
+### 📊 Productivity Features
 
-* Typing Indicators
 * Activity Feed
 * Save Status Indicators
-* Live Connection Status
+* Online Presence Bar
+* Shared Workspace Experience
+
+---
+
+## 👥 User Roles
+
+### Owner
+
+* Create Documents
+* Edit Documents
+* Delete Documents
+* Share Documents
+* Add Collaborators
+* Remove Collaborators
+* Change User Permissions
+
+### Editor
+
+* View Documents
+* Edit Documents
+* Participate in Real-Time Collaboration
+
+### Viewer
+
+* View Documents
+* Read-Only Access
+
+---
+
+## 🏗️ System Architecture
+
+```text
+Frontend (React + Vite)
+        │
+        │ REST APIs + Socket.io
+        ▼
+Backend (Node.js + Express)
+        │
+        ▼
+MongoDB Atlas
+```
+
+### Real-Time Flow
+
+```text
+User A edits document
+        │
+        ▼
+Socket.io Event
+        │
+        ▼
+Backend Socket Server
+        │
+        ▼
+Broadcast Update
+        │
+        ▼
+User B receives update instantly
+```
 
 ---
 
@@ -76,140 +150,171 @@ The platform supports document ownership, collaborator management, permission-ba
 
 * Node.js
 * Express.js
-* MongoDB
-* Mongoose
 * Socket.io
 * JWT Authentication
+* bcryptjs
 * Nodemailer
-* Cookie Parser
 * Helmet
+* Cookie Parser
 * CORS
 
 ### Database
 
 * MongoDB Atlas
+* Mongoose ODM
 
 ### Deployment
 
 * Frontend: Vercel
 * Backend: Render
-
----
-
-## 🏗️ System Architecture
-
-Client (React)
-↓
-Axios / Socket.io
-↓
-Express API + Socket Server
-↓
-MongoDB Atlas
-
-Users interact with the React frontend, which communicates with the Express backend through REST APIs and Socket.io events. Real-time collaboration events are synchronized instantly between connected clients while document data is persisted in MongoDB.
+* Database: MongoDB Atlas
 
 ---
 
 ## 📂 Project Structure
 
+```text
 CollabSpace
+│
 ├── frontend
-│ ├── src
-│ ├── components
-│ ├── pages
-│ ├── hooks
-│ ├── context
-│ └── services
+│   ├── src
+│   │   ├── components
+│   │   ├── pages
+│   │   ├── hooks
+│   │   ├── services
+│   │   ├── context
+│   │   └── api
+│   │
+│   └── public
 │
 ├── backend
-│ ├── src
-│ ├── controllers
-│ ├── services
-│ ├── routes
-│ ├── models
-│ ├── sockets
-│ ├── middlewares
-│ └── config
+│   ├── src
+│   │   ├── config
+│   │   ├── controllers
+│   │   ├── middlewares
+│   │   ├── models
+│   │   ├── routes
+│   │   ├── services
+│   │   ├── sockets
+│   │   └── utils
+│   │
+│   └── server.js
 │
 └── README.md
+```
 
 ---
 
-## 🔐 User Roles
-
-### Owner
-
-* Full document access
-* Share documents
-* Remove collaborators
-* Update collaborator permissions
-* Delete documents
-
-### Editor
-
-* View document
-* Edit document content
-* Participate in real-time collaboration
-
-### Viewer
-
-* View document only
-* Read-only access
-
----
-
-## 🚀 Getting Started
+## 🚀 Local Setup
 
 ### Clone Repository
 
-git clone https://github.com/Fernandes-Samuel01/CollabSpace.git
+```bash
+git clone https://github.com/Fernandes-Samuel01/CollabSpace
+```
 
 ### Install Backend Dependencies
 
+```bash
 cd backend
 npm install
+```
 
 ### Install Frontend Dependencies
 
+```bash
 cd frontend
 npm install
+```
 
-### Run Backend
+### Configure Environment Variables
 
+Backend `.env`
+
+```env
+PORT=5000
+NODE_ENV=development
+
+CLIENT_URL=http://localhost:5173
+
+MONGO_URI=your_mongodb_uri
+
+JWT_SECRET=your_secret
+JWT_EXPIRES_IN=7d
+
+SMTP_HOST=your_smtp_host
+SMTP_PORT=2525
+SMTP_USER=your_user
+SMTP_PASS=your_password
+SMTP_FROM=your_sender
+```
+
+Frontend `.env`
+
+```env
+VITE_API_URL=http://localhost:5000/api/v1
+VITE_SOCKET_URL=http://localhost:5000
+```
+
+### Start Backend
+
+```bash
 npm run dev
+```
 
-### Run Frontend
+### Start Frontend
 
+```bash
 npm run dev
+```
 
 ---
 
-## 🌟 Learning Outcomes
+## 📸 Core Functionalities Demonstrated
+
+* Secure Authentication System
+* Email Verification Workflow
+* Real-Time Collaborative Editing
+* Presence Detection
+* Typing Indicators
+* Role-Based Authorization
+* Live Activity Tracking
+* Production Deployment
+* Socket-Based Communication
+* RESTful API Design
+
+---
+
+## 🎯 Learning Outcomes
 
 This project demonstrates practical implementation of:
 
 * Full Stack MERN Development
 * REST API Design
-* Real-Time Systems using Socket.io
+* Real-Time Systems Engineering
+* WebSocket Communication
 * Authentication & Authorization
-* Role-Based Access Control
 * MongoDB Data Modeling
+* Role-Based Access Control
 * React State Management
-* Frontend-Backend Integration
-* Production Deployment
+* Frontend–Backend Integration
+* Cloud Deployment
+* Production Environment Configuration
 
 ---
 
 ## 👨‍💻 Author
 
-Samuel sanjeev Fernandes
+### Samuel Sanjeev Fernandes
 
 Final Year Computer Science Engineering Student
 
 Full Stack MERN Developer
 
+GitHub: https://github.com/Fernandes-Samuel01
+
 ---
 
 ## 📄 License
 
-This project is developed for educational, learning, and portfolio purposes.
+This project is developed for educational, learning, portfolio, and demonstration purposes.
