@@ -16,11 +16,59 @@ https://collabspace-backend-vi6w.onrender.com
 
 ---
 
+## 🔑 Demo Credentials
+
+### User A
+
+Email: demo1@gmail.com
+
+Password: demo@one
+
+### User B
+
+Email: demo2@gmail.com
+
+Password: demo@two
+
+> Open two browsers to experience real-time collaboration features.
+
+---
+
 ## 📖 Overview
 
 CollabSpace is a modern collaborative document management platform designed to provide seamless teamwork and real-time communication. Users can create documents, invite collaborators, manage permissions, and edit content together instantly.
 
 The application combines secure authentication, real-time synchronization, role-based access control, and collaborative productivity features to deliver a smooth user experience.
+
+---
+
+## 📸 Screenshots
+
+### Dashboard
+
+<img width="1361" height="642" alt="image" src="https://github.com/user-attachments/assets/81216bee-3ecb-4b46-b52c-12afcdcc211c" />
+
+### Document Editor
+
+<img width="1350" height="641" alt="image" src="https://github.com/user-attachments/assets/ecf132c6-b94f-4626-91a9-f98bc368e92b" />
+
+### Real-Time Collaboration
+
+<img width="1351" height="639" alt="image" src="https://github.com/user-attachments/assets/0046920a-eac9-4010-b2b2-e16e9e56ad22" />
+
+<img width="1349" height="637" alt="image" src="https://github.com/user-attachments/assets/a75e3cf4-2ea1-44cb-abbb-bfe92c4495fc" />
+
+### Presence System
+
+<img width="1348" height="636" alt="image" src="https://github.com/user-attachments/assets/a7aec152-5576-4ca4-8ae6-c783907d54a5" />
+
+### Activity Feed
+
+<img width="1344" height="575" alt="image" src="https://github.com/user-attachments/assets/0e7dd8c5-b79c-4464-98d8-458622c77f13" />
+
+### Sharing & Permissions
+
+<img width="1345" height="642" alt="image" src="https://github.com/user-attachments/assets/ac705061-789d-4b38-8102-30ec88632346" />
 
 ---
 
